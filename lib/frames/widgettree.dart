@@ -1,4 +1,5 @@
 import 'package:first_app/counter.dart';
+import 'package:first_app/differentwidgets.dart';
 import 'package:first_app/userInput.dart';
 import 'package:flutter/material.dart';
 
@@ -64,6 +65,26 @@ class _WidgettreeState extends State<Widgettree> {
               },
               child: const Text(
                 "Go To User Input Page",
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 20, width: double.infinity),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 12,
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Differentwidgets()),
+                );
+              },
+              child: const Text(
+                "Go To Example Widgets Page",
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
             ),
