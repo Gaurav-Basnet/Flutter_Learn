@@ -103,7 +103,7 @@ class _DifferentwidgetsState extends State<Differentwidgets> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             Image.network(
-              "https://flutter.dev/assets/images/shared/brand/flutter/logo/flutter-lockup.png",
+              "https://cdn.pixabay.com/photo/2025/07/10/11/33/sat-9706519_640.jpg",
               height: 100,
             ),
           ],
