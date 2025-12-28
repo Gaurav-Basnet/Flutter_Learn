@@ -7,60 +7,61 @@ class Rowsandcolumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Row & Column Example"),
+        title: const Text("Row & Column & Expanded "),
         centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              "Column Widget",
+              "Using Expanded Widget",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 20),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  height: 80,
-                  width: 80,
-                  color: Colors.red,
-                  child: const Center(
-                    child: Text("1", style: TextStyle(color: Colors.white)),
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      color: Colors.orange,
+                      child: const Center(
+                        child: Text(
+                          "Left",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-                Container(
-                  height: 80,
-                  width: 80,
-                  color: Colors.blue,
-                  child: const Center(
-                    child: Text("2", style: TextStyle(color: Colors.white)),
+
+                  const SizedBox(width: 10),
+
+                  Expanded(
+                    child: Container(
+                      color: Colors.teal,
+                      child: const Center(
+                        child: Text(
+                          "Right",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-                Container(
-                  height: 80,
-                  width: 80,
-                  color: Colors.green,
-                  child: const Center(
-                    child: Text("3", style: TextStyle(color: Colors.white)),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
 
-            const SizedBox(height: 30),
+            const SizedBox(height: 20),
 
             Container(
+              height: 60,
               width: double.infinity,
-              padding: const EdgeInsets.all(15),
-              color: Colors.deepPurple,
+              color: Colors.black,
               child: const Center(
                 child: Text(
-                  "This is inside a Column",
+                  "Bottom Section",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
