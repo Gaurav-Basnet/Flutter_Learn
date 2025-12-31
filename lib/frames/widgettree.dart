@@ -2,6 +2,7 @@ import 'package:first_app/cards.dart';
 import 'package:first_app/counter.dart';
 import 'package:first_app/differentwidgets.dart';
 import 'package:first_app/rowsandcolumn.dart';
+import 'package:first_app/settings.dart';
 import 'package:first_app/timer.dart';
 import 'package:first_app/userInput.dart';
 import 'package:flutter/material.dart';
@@ -163,7 +164,7 @@ class _WidgettreeState extends State<Widgettree> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Cards()),
+                  MaterialPageRoute(builder: (context) => Settings()),
                 );
               },
               child: const Text(

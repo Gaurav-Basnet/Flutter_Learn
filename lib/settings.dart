@@ -1,3 +1,4 @@
+import 'package:first_app/data/notifiers.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
@@ -14,7 +15,14 @@ class _SettingsState extends State<Settings> {
       appBar: AppBar(title: Text("Settings")),
       body: Column(
         children: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.brightness_1_outlined)),
+          IconButton(
+            onPressed: () {
+              themeNotifier.value = themeNotifier.value == ThemeMode.light
+                  ? ThemeMode.dark
+                  : ThemeMode.light;
+            },
+            icon: Icon(Icons.brightness_6),
+          ),
         ],
       ),
     );
