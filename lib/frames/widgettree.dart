@@ -1,5 +1,4 @@
-import 'dart:async';
-
+import 'package:first_app/cards.dart';
 import 'package:first_app/counter.dart';
 import 'package:first_app/differentwidgets.dart';
 import 'package:first_app/rowsandcolumn.dart';
@@ -129,6 +128,46 @@ class _WidgettreeState extends State<Widgettree> {
               },
               child: const Text(
                 "Go To Timer Page",
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 20, width: double.infinity),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 12,
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Cards()),
+                );
+              },
+              child: const Text(
+                "Go To Cards & Items Page",
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 20, width: double.infinity),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 12,
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Cards()),
+                );
+              },
+              child: const Text(
+                "Go To Settings Page",
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
             ),
